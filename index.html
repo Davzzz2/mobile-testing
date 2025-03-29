@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cases Assistant</title>
-        <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: black;
@@ -75,7 +75,7 @@
             margin: 20px 0 5px 0;
             margin-top: 6px;
             position: absolute;
-            margin-left: 260px; /* Decreased by 80px */
+            margin-left: 260px; /* Moved further to the left */
             font-size: 18px;
         }
         .bet-size-container {
@@ -88,7 +88,7 @@
             padding: 5px;
             margin-right: 5px;
             position: absolute;
-            margin-left: 340px; /* Decreased by 80px */
+            margin-left: 260px; /* Moved further to the left */
             margin-top: 30px;
             height: 21px; /* Increased height */
             background-color: black;
@@ -105,7 +105,7 @@
             margin-left: 5px;
             min-width: 50px;
             position: absolute;
-            margin-left: 445px; /* Decreased by 80px */
+            margin-left: 350px; /* Moved further to the left */
             margin-top: 30px;
         }
         .bet-size-button-1 {
@@ -118,7 +118,7 @@
             margin-left: 5px;
             min-width: 50px;
             position: absolute;
-            margin-left: 500px; /* Decreased by 80px */
+            margin-left: 405px; /* Moved further to the left */
             margin-top: 30px;
         }
         .bet-size-button:hover {
@@ -146,8 +146,9 @@
             padding: 5px;
             font-size: 16px;
         }
+        /* Back arrow positioned at top left corner of the page on desktop */
         .back-button {
-            position: absolute;
+            position: fixed;
             top: 10px;
             left: 10px;
             width: 40px;
@@ -172,7 +173,7 @@
                         0 0 40px rgba(255, 255, 255, 0.3);
         }
 
-        /* Mobile Support - overrides only */
+        /* Mobile Support */
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -186,7 +187,7 @@
                 font-size: 1.5em;
                 margin-bottom: 15px;
             }
-            /* Stack form elements vertically, removing absolute positioning */
+            /* Stack the form elements vertically and reset absolute positioning */
             .difficulty-label,
             .difficulty-select,
             .bet-size-label,
@@ -218,7 +219,14 @@
                 position: static;
                 margin-right: 10px;
             }
-            /* Make the cases stack vertically */
+            /* Adjust the back button for mobile if needed */
+            .back-button {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                top: 10px;
+                left: 10px;
+            }
             .case-container {
                 flex-direction: column;
                 align-items: center;
@@ -226,14 +234,6 @@
             img {
                 width: 100%;
                 max-width: 300px;
-            }
-            /* Optionally adjust back button size for mobile */
-            .back-button {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                top: 10px;
-                left: 10px;
             }
         }
     </style>
