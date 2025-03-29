@@ -86,7 +86,7 @@
         .bet-size-input {
             width: 80px;
             padding: 5px;
-            margin-right: 5px;
+            margin-right: 10px;
             position: absolute;
             margin-left: 340px; /* Moved further to the left */
             margin-top: 30px;
@@ -208,16 +208,24 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                width: 100%;
             }
             .bet-size-input {
                 position: static;
                 width: 80px;
-                margin-right: 10px;
+                margin: 0 10px 0 0;
             }
             .bet-size-button,
             .bet-size-button-1 {
                 position: static;
-                margin-right: 10px;
+                margin: 0 10px 0 0;
+            }
+            /* Override left margins for bet size elements on mobile */
+            .bet-size-label,
+            .bet-size-input,
+            .bet-size-button,
+            .bet-size-button-1 {
+                margin-left: 0 !important;
             }
             /* Adjust the back button for mobile if needed */
             .back-button {
